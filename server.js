@@ -2,7 +2,7 @@ var servidor = require('http');
 var url = require('url');
 var fileSystem = require('fs');
 
-function inicio(enrutar, manejador){
+//function inicio(enrutar, manejador){
 	function runServer(requiere, respuesta) {
 		var ruta = url.parse(requiere.url).pathname;
 		/*var contenido = enrutar(manejador,ruta,respuesta);*/
@@ -21,8 +21,8 @@ function inicio(enrutar, manejador){
 	}	
 	servidor.createServer(runServer).listen(2500,"localhost" || "127.0.0.1");
 	console.log('Server running at http://127.0.0.1:2500/');
-}
-exports.serv = inicio;
+//}
+//exports.serv = inicio;
 /*var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
